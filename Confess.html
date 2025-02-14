@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAPPY VALENTINE'S DAY</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Column 1 -->
+        <div class="column1">
+            <div class="container">
+                <div class="envelope-wrapper">
+                    <div class="envelope">
+                        <div class="letter">
+                            <div class="text">
+                                <strong>Dearest Micaela,</strong>
+                                <p> 
+                                    I don't know how to start this letter, because I'm afraid it might be the end of our good acquaintance, or if I'm lucky, the realization of my dreams, which is for you to love me as I love you. I told myself I might as well take the risks because it's the only remedy I know that could unburden this feeling I've been keeping ever since.
+                                    I Admire you so much <3
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="heart"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="column2">
+            <div class="separator-box">
+                <div class="audio-container" id="yt-container">
+                    <iframe id="yt-player" width="0" height="0" frameborder="0" allow="autoplay"></iframe>
+                </div>
+                <H2>Would you date me this Feb 14? </H2>
+                <img src="https://media.tenor.com/LRDMe1QpqFYAAAAC/cat-cute.gif" alt="GIF">
+                <button class="playAudio" id="playAudio" onclick="playAudio()">Play Audio</button>
+                <button class="yesBTN" id="yesBTN" onclick="yesButton()">Yes</button>
+                <button class="noBTN" id="noBTN">No</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        // Envelope opening animation
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        });
+        // YouTube Audio Control
+        let player = document.getElementById("yt-player");
+
+        playAudio = () => {
+            player.src = "https://www.youtube.com/embed/4adZ7AguVcw?autoplay=1"; // Fixed URL
+        }
+        yesButton = () => {
+            alert("Yeyy! Iloooveyoooouuu pooo");
+            window.location.reload();
+        }
+        const moveRandomEl = (e) => {
+            e.style.position = "absolute";
+            e.style.top = Math.floor(Math.random() * 90 + 5) + "%";
+            e.style.left = Math.floor(Math.random() * 90 + 5) + "%";
+        }
+        const moveRandomBTN = document.getElementById("noBTN").addEventListener("mouseenter", (e) => {
+            moveRandomEl(e.target);
+        });
+    </script>
+</body>
+</html>
